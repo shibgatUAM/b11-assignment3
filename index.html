@@ -16,6 +16,28 @@
             color: inherit !important;
         }
 
+        @keyframes heading-fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.9);
+                letter-spacing: 0.2em;
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(10px) scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                letter-spacing: normal;
+            }
+        }
+
+        .animate-heading {
+            animation: heading-fade-in 1.2s ease-out;
+            animation-delay: 0.5s;
+        }
+
     </style>
     <script>
         tailwind.config = {
@@ -45,9 +67,9 @@
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal gap-3 px-1 text-xl">
-                        <li><a class="hover:bg-primary-color hover:text-white">Product</a></li>
-                        <li><a class="hover:bg-primary-color hover:text-white">Services</a></li>
-                        <li><a class="hover:bg-primary-color hover:text-white">Contact us</a></li>
+                        <li><a href="#products" class="hover:bg-primary-color hover:text-white">Product</a></li>
+                        <li><a href="#services" class="hover:bg-primary-color hover:text-white">Services</a></li>
+                        <li><a href="#contact" class="hover:bg-primary-color hover:text-white">Contact us</a></li>
                     </ul>
                 </div>
 
@@ -69,7 +91,7 @@
     <section class="bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
     <!--   Description Part     -->
         <div class="text-center w-[827px] m-auto">
-            <h1 class="font-semibold text-5xl text-font-color mb-7">Freshness <span class="text-primary-color">You Can</span><br>
+            <h1 class="font-semibold text-5xl text-font-color mb-7 animate-heading">Freshness <span class="text-primary-color">You Can</span><br>
                 <span class="text-primary-color">Count</span> On, Prices You’ll Love!</h1>
             <p class="font-normal text-xl mb-9">
                 Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>
@@ -85,7 +107,7 @@
 <!-- END HERO-->
 
 <!-- START SERVICES -->
-    <section class="p-36">
+    <section class="p-36" id="services">
         <h4 class="font-semibold text-4xl mb-8 text-primary-color">Services</h4>
         <div class="card grid grid-cols-3 gap-4">
             <div class="card-body bg-card-color rounded-2xl p-8">
@@ -114,7 +136,7 @@
 <!-- END SERVICES -->
 
 <!-- START PRODUCTS -->
-    <section class="p-32 bg-card-color">
+    <section class="p-32 bg-card-color" id="products">
         <h4 class="font-semibold text-4xl mb-8 text-primary-color">Popular Products</h4>
         <div class="grid grid-cols-4 gap-4 w-[1320px] h-[402px]">
             <div class="relative col-span-1 row-span-3 bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] p-8 rounded-2xl">
@@ -218,5 +240,41 @@
             </div>
         </div>
     </section>
+<!-- END PRODUCTS -->
+
+<!-- START CONTACT US-->
+    <section class="mx-auto py-16 px-8 bg-gradient-to-r from-green-400 via-transparent to-white/50" id="contact">
+        <div class="grid md:grid-cols-2 gap-8 items-center justify-items-center">
+            <div>
+                <img src="assets/images/call-center.png" alt="Call Center" width="350" height="350">
+            </div>
+
+            <!-- Form Section -->
+            <div class="space-y-4">
+                <h2 class="text-3xl font-semibold text-primary-color text-center">Get in Touch</h2>
+                <p class="text-gray-600 text-center">We'd love to hear from you! Fill out the form below.</p>
+
+                <label class="block">
+                    <span class="text-gray-700 font-medium">Name</span>
+                    <input type="text" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+                </label>
+
+                <label class="block">
+                    <span class="text-gray-700 font-medium">Email</span>
+                    <input type="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email">
+                </label>
+
+                <label class="block">
+                    <span class="text-gray-700 font-medium">Message</span>
+                    <textarea class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Message..." rows="4"></textarea>
+                </label>
+
+                <button type="submit" class="block mx-auto w-1/2 btn py-3 bg-primary-color text-white font-semibold rounded-lg hover:bg-white hover:border-primary-color hover:text-primary-color">
+                    Send Message
+                </button>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
