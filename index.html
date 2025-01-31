@@ -6,34 +6,109 @@
     <title>Nature's Platter</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1caa66d63a.js" crossorigin="anonymous"></script>
+    <style>
+        .menu li a:active {
+            background-color: inherit !important;
+            color: inherit !important;
+        }
+
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                      'primary-color': "#179800",
+                        'secondary-color': "#88C057",
+                        'font-color': "#111111",
+                        'card-color': "#EFEBE3",
+                    },
+                    fontFamily: {
+                        sora: ["Sora", "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
+<body class="font-sora">
+    <header class="mb-16">
+        <nav class="px-32">
             <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                    <img src="assets/images/logo-header.png" alt="Nature's Platter">
+                <div class="navbar-start py-6">
+                    <img src="assets/images/logo-header.png" alt="Nature's Platter" width="154" height="60">
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul class="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                    <ul class="menu menu-horizontal gap-3 px-1 text-xl">
+                        <li><a class="hover:bg-primary-color hover:text-white">Product</a></li>
+                        <li><a class="hover:bg-primary-color hover:text-white">Services</a></li>
+                        <li><a class="hover:bg-primary-color hover:text-white">Contact us</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn">Button</a>
+
+                <div class="navbar-end gap-3 py-8">
+                    <i class="fa-solid fa-magnifying-glass text-lg text-gray-700 hover:text-primary-color transition-colors duration-300 cursor-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping text-lg text-gray-700 hover:text-primary-color transition-colors duration-30 cursor-pointer"></i>
+
+                    <a class="btn px-7 py-2.5 border-primary-color bg-white text-base
+                    hover:bg-secondary-color hover:text-white w-[117px] h-[45px]">
+                        Login</a>
+                    <a class="btn px-7 py-2.5 bg-primary-color text-white text-base
+                    w-[146px] h-[45px] hover:bg-white hover:text-black hover:border-primary-color">
+                        Register</a>
                 </div>
             </div>
         </nav>
     </header>
+<!--  HERO START  -->
+    <section class="bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
+    <!--   Description Part     -->
+        <div class="text-center w-[827px] m-auto">
+            <h1 class="font-semibold text-5xl text-font-color mb-7">Freshness <span class="text-primary-color">You Can</span><br>
+                <span class="text-primary-color">Count</span> On, Prices You’ll Love!</h1>
+            <p class="font-normal text-xl mb-9">
+                Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>
+                staples, we’ve got you covered every day!
+            </p>
+        </div>
+    <!--  Image Part  -->
+
+        <div>
+            <img src="assets/images/hero-vegetables.png" alt="hero-vegetables" class="w-[1031px] h-[838px] m-auto">
+        </div>
+    </section>
+<!-- END HERO-->
+
+<!-- START SERVICES -->
+    <section class="p-36">
+        <h4 class="font-semibold text-4xl mb-8 text-primary-color">Services</h4>
+        <div class="card grid grid-cols-3 gap-4">
+            <div class="card-body bg-card-color rounded-2xl p-8">
+                <figure class="w-[100px] h-[100px] bg-white rounded-full m-auto mb-3">
+                    <img src="assets/images/service.png" alt="service" width="70" height="70">
+                </figure>
+                <h3 class="card-title mx-auto mb-2 font-semibold text-2xl">24/7 Services</h3>
+                <p class="text-center font-light text-lg">Business with 24/7 services ensures seamless shopping, customer support, and order fulfillment anytime, anywhere</p>
+            </div>
+            <div class="card-body bg-card-color rounded-2xl">
+                <figure class="w-[100px] h-[100px] bg-white rounded-full m-auto mb-3">
+                    <img src="assets/images/delivery.png" alt="service" width="70" height="70">
+                </figure>
+                <h3 class="card-title mx-auto mb-2 font-semibold text-2xl">Fast Delivery</h3>
+                <p class="text-center font-light text-lg">Fast delivery ensures seamless shopping, instant support, and quick order fulfillment anytime, anywhere.</p>
+            </div>
+            <div class="card-body bg-card-color rounded-2xl">
+                <figure class="w-[100px] h-[100px] bg-white rounded-full m-auto mb-3">
+                    <img src="assets/images/healthy.png" alt="service" width="70" height="70">
+                </figure>
+                <h3 class="card-title mx-auto mb-2 font-semibold text-2xl">Healthy Products</h3>
+                <p class="text-center font-light text-lg">Shop for nutritious, organic, and natural healthy products anytime with our 24/7 e-commerce service, ensuring fast delivery and quality care.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
