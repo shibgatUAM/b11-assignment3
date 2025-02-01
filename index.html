@@ -59,11 +59,19 @@
     </script>
 </head>
 <body class="font-sora">
-    <header class="mb-16">
-        <nav class="px-32">
+    <header class="mb-12 lg:mb-16">
+        <nav class="px-4 border-b-2 border-[#82AF58] lg:px-32 lg:border-none lg:border-b-0">
             <div class="navbar bg-base-100">
-                <div class="navbar-start py-6">
-                    <img src="assets/images/logo-header.png" alt="Nature's Platter" width="154" height="60">
+                <div class="navbar-start py-4 flex items-center justify-between w-full lg:py-6 lg:w-2/4">
+                <!-- for large device logo -->
+                    <img class="hidden lg:block" src="assets/images/logo-header.png" alt="Nature's Platter" width="154" height="60">
+                    
+                <!-- for mobile device logo -->
+                    <img class="block lg:hidden" src="assets/images/mobile-logo.png" alt="Nature's Platter" width="48" height="43">
+                <!-- mobile menu -->
+                    <button class="lg:hidden text-primary-color">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal gap-3 px-1 text-xl">
@@ -73,7 +81,7 @@
                     </ul>
                 </div>
 
-                <div class="navbar-end gap-3 py-8">
+                <div class="navbar-end gap-3 py-8 hidden lg:flex">
                     <i class="fa-solid fa-magnifying-glass text-lg text-gray-700 hover:text-primary-color transition-colors duration-300 cursor-pointer"></i>
                     <i class="fa-solid fa-cart-shopping text-lg text-gray-700 hover:text-primary-color transition-colors duration-30 cursor-pointer"></i>
 
@@ -90,10 +98,10 @@
 <!--  HERO START  -->
     <section class="bg-gradient-to-t from-[#EFEBE3] to-[#FFFFFF]">
     <!--   Description Part     -->
-        <div class="text-center w-[827px] m-auto">
-            <h1 class="font-semibold text-5xl text-font-color mb-7 animate-heading">Freshness <span class="text-primary-color">You Can</span><br>
+        <div class="text-center w-[341px] mx-auto lg:w-[827px] lg:m-auto">
+            <h1 class="font-semibold text-3xl lg:text-5xl text-font-color mb-4 lg:mb-7 animate-heading">Freshness <span class="text-primary-color">You Can</span><br>
                 <span class="text-primary-color">Count</span> On, Prices You’ll Love!</h1>
-            <p class="font-normal text-xl mb-9">
+            <p class="font-normal text-sm opacity-80 lg:text-xl mb-4 lg:mb-9">
                 Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br>
                 staples, we’ve got you covered every day!
             </p>
@@ -101,13 +109,13 @@
     <!--  Image Part  -->
 
         <div>
-            <img src="assets/images/hero-vegetables.png" alt="hero-vegetables" class="w-[1031px] h-[838px] m-auto">
+            <img src="assets/images/hero-vegetables.png" alt="hero-vegetables" width="1031" height="838" class="lg:w-[1031px] lg:h-[838px] m-auto">
         </div>
     </section>
 <!-- END HERO-->
 
 <!-- START SERVICES -->
-    <section class="p-36" id="services">
+    <section class="hidden p-36" id="services">
         <h4 class="font-semibold text-4xl mb-8 text-primary-color">Services</h4>
         <div class="card grid grid-cols-3 gap-4">
             <div class="card-body bg-card-color rounded-2xl p-8">
@@ -136,7 +144,7 @@
 <!-- END SERVICES -->
 
 <!-- START PRODUCTS -->
-    <section class="p-32 bg-card-color" id="products">
+    <section class="hidden p-32 bg-card-color" id="products">
         <h4 class="font-semibold text-4xl mb-8 text-primary-color">Popular Products</h4>
         <div class="grid grid-cols-4 gap-4 w-[1320px] h-[402px]">
             <div class="relative col-span-1 row-span-3 bg-gradient-to-br from-[#53DB3A] to-[#FFFFFF] p-8 rounded-2xl">
@@ -243,7 +251,7 @@
 <!-- END PRODUCTS -->
 
 <!-- START CONTACT US-->
-    <section class="mx-auto py-16 px-8 bg-gradient-to-r from-[#53DB3A] via-transparent to-white/50" id="contact">
+    <section class="hidden mx-auto py-16 px-8 bg-gradient-to-r from-[#53DB3A] via-transparent to-white/50" id="contact">
         <div class="grid grid-cols-2 gap-8 items-center justify-items-center">
             <div>
                 <img src="assets/images/call-center.png" alt="Call Center" width="350" height="350">
@@ -278,7 +286,7 @@
 <!-- END CONTACT US-->
 
 <!-- START ARRIVAL & OFFERS -->
-    <section class="p-32 relative">
+    <section class="hidden p-32 relative">
         <h4 class="font-semibold text-4xl mb-8 text-primary-color">Arrival & Offers</h4>
         <div class="grid grid-cols-3 gap-5 w-[1320px] h-[402px] mb-40">
             <div class="grid grid-cols-2 col-span-2 gap-8 bg-[#115414] rounded-2xl p-10">
@@ -319,7 +327,7 @@
 <!-- END ARRIVAL & OFFERS-->
 
 <!-- START FOOTER -->
-<section class="bg-primary-color">
+    <section class="hidden bg-primary-color">
     <div class="grid grid-cols-3 gap-10 pt-96 px-36 pb-32 mx-auto">
         <div>
             <img src="assets/images/logo-footer.png" alt="Dawat Logo">
